@@ -1,0 +1,24 @@
+{
+  "name": "calc-tdd-tests",
+  "version": "1.0.0",
+  "main": "main.js",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/okraciunas/calc-tdd-tests.git"
+  },
+  "author": "Leonardo <leonardo@okraciunas.com> (http://www.okraciunas.com/)",
+  "bugs": {
+    "url": "https://github.com/okraciunas/calc-tdd-tests/issues"
+  },
+  "homepage": "https://github.com/okraciunas/calc-tdd-tests#readme",
+  "scripts": {
+    "test": "mocha ./tests/**/*.spec.js",
+    "test:watch": "yarn run test --watch"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^7.1.0"
+  },
+  "license": "MIT"
+}
