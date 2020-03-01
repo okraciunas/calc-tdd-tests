@@ -33,24 +33,58 @@ describe("Calc", () => {
       expect(calc.sum()).to.be.equal(0);
     });
 
-    it(`should return the value "4" when "sum(2,2)"`, () => {
-      expect(calc.sum(2, 2)).to.be.equal(4);
+    it(`should return the value "4" when "sum(4)"`, () => {
+      expect(calc.sum(4)).to.be.equal(4);
     });
 
-    it(`should return the value "4" when "sum(1,1,1,1)"`, () => {
-      expect(calc.sum(1, 1, 1, 1)).to.be.equal(4);
-    });
-
-    it(`should return the value "4" when "sum(2,1,1)"`, () => {
-      expect(calc.sum(2, 1, 1)).to.be.equal(4);
-    });
-
-    it(`should return the value "4" when "sum(4,0)"`, () => {
+    it(`should return the value "4" when "sum(4, 0)"`, () => {
       expect(calc.sum(4, 0)).to.be.equal(4);
     });
 
-    it(`should return the value "4" when "sum(4)"`, () => {
-      expect(calc.sum(4)).to.be.equal(4);
+    it(`should return the value "4" when "sum(2, 2)"`, () => {
+      expect(calc.sum(2, 2)).to.be.equal(4);
+    });
+
+    it(`should return the value "4" when "sum(1, 1, 1, 1)"`, () => {
+      expect(calc.sum(1, 1, 1, 1)).to.be.equal(4);
+    });
+
+    it(`should return the value "4" when "sum(2, 1, 1)"`, () => {
+      expect(calc.sum(2, 1, 1)).to.be.equal(4);
+    });
+  });
+
+  describe(`#sub(...args)`, () => {
+    it(`should return the value "0" when "sub()"`, () => {
+      expect(calc.sub()).to.be.equal(0);
+    });
+
+    it(`should return the value "0" when "sub(0)"`, () => {
+      expect(calc.sub(0)).to.be.equal(0);
+    });
+
+    it(`should return the value "4" when "sub(4)"`, () => {
+      expect(calc.sub(4)).to.be.equal(4);
+    });
+
+    it(`should return the value "4" when "sub(4, 0)"`, () => {
+      expect(calc.sub(4, 0)).to.be.equal(4);
+    });
+
+    it(`should return the value "0" when "sub(2, 2)"`, () => {
+      expect(calc.sub(2, 2)).to.be.equal(0);
+    });
+
+    it(`should return the value "-2" when "sub(1, 1, 1, 1)"`, () => {
+      expect(calc.sub(1, 1, 1, 1)).to.be.equal(-2);
+    });
+
+    it(`should return the value "0" when "sub(2, 1, 1)"`, () => {
+      expect(calc.sub(2, 1, 1)).to.be.equal(0);
+    });
+
+    it(`should return the value "-4" when "sub(6, 10)"`, () => {
+      expect(calc.sub(6, 10)).to.be.equal(-4);
     });
   });
 });
