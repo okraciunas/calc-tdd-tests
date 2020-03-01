@@ -2,7 +2,7 @@
   "name": "calc-tdd-tests",
   "version": "1.0.0",
   "main": "main.js",
-  "description": "",
+  "description": "'Hello world para testes com Mocha + Chai",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/okraciunas/calc-tdd-tests.git"
