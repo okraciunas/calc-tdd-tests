@@ -33,6 +33,10 @@ describe("Calc", () => {
       expect(calc.sum()).to.be.equal(0);
     });
 
+    it(`should return the value "0" when "sum(0)"`, () => {
+      expect(calc.sum(0)).to.be.equal(0);
+    });
+
     it(`should return the value "4" when "sum(4)"`, () => {
       expect(calc.sum(4)).to.be.equal(4);
     });
