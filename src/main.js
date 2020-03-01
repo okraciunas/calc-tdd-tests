@@ -12,7 +12,14 @@ const mult = (...args) => {
   return args.reduce((acc, curr) => acc * curr, num);
 };
 
-const div = (...args) => {};
+const div = (...args) => {
+  const num = args.length > 0 ? args.shift() : 0;
+  return args.reduce((acc, curr) => {
+    if (curr === 0) return "Não é possível realizar uma divisão por 0.";
+
+    return acc / curr;
+  }, num);
+};
 
 module.exports = {
   sum,

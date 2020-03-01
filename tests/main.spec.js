@@ -129,4 +129,48 @@ describe("Calc", () => {
       expect(calc.mult(6, 10)).to.be.equal(60);
     });
   });
+
+  describe("#div(...args)", () => {
+    it(`should return the value "0" when "div()"`, () => {
+      expect(calc.div()).to.be.equal(0);
+    });
+
+    it(`should return the value "0" when "div(0)"`, () => {
+      expect(calc.div(0)).to.be.equal(0);
+    });
+
+    it(`should return the value "4" when "div(4)"`, () => {
+      expect(calc.div(4)).to.be.equal(4);
+    });
+
+    it(`should return the value "Não é possível realizar uma divisão por 0." when "div(4, 0)"`, () => {
+      expect(calc.div(4, 0)).to.be.equal(
+        "Não é possível realizar uma divisão por 0."
+      );
+    });
+
+    it(`should return the value "1" when "div(2, 2)"`, () => {
+      expect(calc.div(2, 2)).to.be.equal(1);
+    });
+
+    it(`should return the value "1" when "div(1, 1, 1, 1)"`, () => {
+      expect(calc.div(1, 1, 1, 1)).to.be.equal(1);
+    });
+
+    it(`should return the value "2" when "div(2, 1, 1)"`, () => {
+      expect(calc.div(2, 1, 1)).to.be.equal(2);
+    });
+
+    it(`should return the value "0.03333333333333333" when "div(2, 3, 4, 5)"`, () => {
+      expect(calc.div(2, 3, 4, 5)).to.be.equal(0.03333333333333333);
+    });
+
+    it(`should return the value "5" when "div(300, 2, 5, 3)"`, () => {
+      expect(calc.div(300, 2, 5, 3)).to.be.equal(10);
+    });
+
+    it(`should return the value "0.5" when "div(5, 10)"`, () => {
+      expect(calc.div(5, 10)).to.be.equal(0.5);
+    });
+  });
 });
