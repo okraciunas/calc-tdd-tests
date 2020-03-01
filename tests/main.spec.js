@@ -91,4 +91,42 @@ describe("Calc", () => {
       expect(calc.sub(6, 10)).to.be.equal(-4);
     });
   });
+
+  describe("#mult(...args)", () => {
+    it(`should return the value "0" when "mult()"`, () => {
+      expect(calc.mult()).to.be.equal(0);
+    });
+
+    it(`should return the value "0" when "mult(0)"`, () => {
+      expect(calc.mult(0)).to.be.equal(0);
+    });
+
+    it(`should return the value "4" when "mult(4)"`, () => {
+      expect(calc.mult(4)).to.be.equal(4);
+    });
+
+    it(`should return the value "0" when "mult(4, 0)"`, () => {
+      expect(calc.mult(4, 0)).to.be.equal(0);
+    });
+
+    it(`should return the value "4" when "mult(2, 2)"`, () => {
+      expect(calc.mult(2, 2)).to.be.equal(4);
+    });
+
+    it(`should return the value "1" when "mult(1, 1, 1, 1)"`, () => {
+      expect(calc.mult(1, 1, 1, 1)).to.be.equal(1);
+    });
+
+    it(`should return the value "2" when "mult(2, 1, 1)"`, () => {
+      expect(calc.mult(2, 1, 1)).to.be.equal(2);
+    });
+
+    it(`should return the value "120" when "mult(2, 3, 4, 5)"`, () => {
+      expect(calc.mult(2, 3, 4, 5)).to.be.equal(120);
+    });
+
+    it(`should return the value "60" when "mult(6, 10)"`, () => {
+      expect(calc.mult(6, 10)).to.be.equal(60);
+    });
+  });
 });
